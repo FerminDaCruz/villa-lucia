@@ -10,7 +10,6 @@ const images = [
     '/galery/8_LE_upscale_prime_x4.jpg',
     '/galery/14_LE_upscale_prime_x4.jpg',
     '/galery/15_LE_upscale_prime_x4.jpg',
-    '/16.jpg',
 ];
 
 export default function ImageSlider() {
@@ -52,7 +51,6 @@ export default function ImageSlider() {
                         alt={`Slide ${index}`}
                         fill
                         priority={index === 0}
-                        quality={100}
                         sizes="(max-width: 1056px) 100vw, 1056px"
                         className="object-cover"
                     />

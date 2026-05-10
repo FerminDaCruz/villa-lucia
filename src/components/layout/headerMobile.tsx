@@ -66,7 +66,7 @@ export default function HeaderMobile({ scrolled }: HeaderMobileProps) {
                     <Link href="/servicios" onClick={() => setOpen(false)}>
                         Servicios
                     </Link>
-                    <Link href="/cabañas" onClick={() => setOpen(false)}>
+                    <Link href="/cabanas" onClick={() => setOpen(false)}>
                         Cabañas
                     </Link>
                     <Link href="/contacto" onClick={() => setOpen(false)}>

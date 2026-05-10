@@ -36,13 +36,13 @@ export default function HeaderDesktop({ scrolled }: HeaderDesktopProps) {
                     Servicios
                 </Link>
                 <Link
-                    href="/"
+                    href="/cabanas"
                     className={`hover:text-light-green ${scrolled ? 'text-dark-green' : 'text-white'}`}
                 >
                     Cabañas
                 </Link>
                 <Link
-                    href="/"
+                    href="/contacto"
                     className={`hover:text-light-green ${scrolled ? 'text-dark-green' : 'text-white'}`}
                 >
                     Contacto
@@ -50,7 +50,7 @@ export default function HeaderDesktop({ scrolled }: HeaderDesktopProps) {
             </nav>
             <button
                 className={` px-6 py-2 rounded-full uppercase border transition-all duration-200 
-			${scrolled ? 'text-dark-green border-dark-green hover:bg-dark-green hover:text-white' : 'bg-dark-green text-white border-dark-green hover:bg-white hover:text-dark-green'}`}
+			${scrolled ? 'text-dark-green border-dark-green hover:bg-dark-green hover:text-white' : 'bg-transparent text-white border-white hover:bg-white hover:text-dark-green hover:border-dark-green'}`}
             >
                 Reservar
             </button>

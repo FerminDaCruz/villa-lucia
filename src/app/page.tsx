@@ -3,6 +3,8 @@ import ImageSlider from '@/components/mainPage/imageSlider';
 import InfoSections from '@/components/mainPage/infoSection';
 import ContactSection from '@/components/mainPage/contactSection';
 import Image from 'next/image';
+import ReviewsSection from '@/components/mainPage/reviewsSection';
+import FaqSection from '@/components/mainPage/faqSection';
 
 export default function Home() {
     return (
@@ -13,7 +15,6 @@ export default function Home() {
                     alt="Background"
                     fill
                     priority
-                    quality={100}
                     sizes="100vw"
                     className="object-cover hidden md:block"
                 />
@@ -22,10 +23,10 @@ export default function Home() {
                     alt="Background"
                     fill
                     priority
-                    quality={100}
                     sizes="100vw"
                     className="object-cover block md:hidden"
                 />
+
                 <div className="absolute inset-0 bg-black/40" />
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
@@ -39,6 +40,7 @@ export default function Home() {
                         height={500}
                         alt="Villa Lucia Logo"
                         className="w-64 md:w-96 h-auto mb-10"
+                        priority
                     />
                     <a
                         href="#"
@@ -51,6 +53,8 @@ export default function Home() {
             <InfoSections />
             <ImageSlider />
             <ContactSection />
+            <ReviewsSection />
+            <FaqSection />
         </div>
     );
 }
