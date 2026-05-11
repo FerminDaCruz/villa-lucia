@@ -27,9 +27,9 @@ export default function HeaderMobile({ scrolled }: HeaderMobileProps) {
         <div
             className={`sm:hidden fixed top-0 left-0 w-full z-20 transition-all duration-300 ease-in-out px-2 py-2 my-auto ${
                 open
-                    ? 'h-screen bg-black/85'
+                    ? 'h-screen bg-black/90'
                     : `h-[78px] ${
-                          scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+                          scrolled ? 'backdrop-blur-lg' : 'bg-transparent'
                       }`
             }`}
         >
@@ -39,13 +39,7 @@ export default function HeaderMobile({ scrolled }: HeaderMobileProps) {
                     width={100}
                     height={100}
                     alt="Villa Lucia Logo"
-                    src={
-                        open
-                            ? '/logo/logo-blanco-sinbg.png'
-                            : scrolled
-                              ? '/logo/logo.png'
-                              : '/logo/logo-blanco-sinbg.png'
-                    }
+                    src="/logo/logo-blanco-sinbg.png"
                 />
 
                 <MobileMenu open={open} setOpen={setOpen} scrolled={scrolled} />

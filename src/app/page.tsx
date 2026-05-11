@@ -44,7 +44,7 @@ export default function Home() {
                     />
                     <a
                         href="#"
-                        className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-dark-green transition-all duration-200"
+                        className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-dark-green transition-all duration-200 backdrop-blur-md"
                     >
                         Consultar disponibilidad
                     </a>

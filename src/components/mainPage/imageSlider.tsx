@@ -60,14 +60,14 @@ export default function ImageSlider() {
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-4">
                     <button
                         onClick={prevSlide}
-                        className="pointer-events-auto bg-black/40 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm"
+                        className="pointer-events-auto bg-black/30 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm cursor-pointer hover:bg-black/50 transition-colors duration-200"
                     >
                         <FaChevronLeft />
                     </button>
 
                     <button
                         onClick={nextSlide}
-                        className="pointer-events-auto bg-black/40 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm"
+                        className="pointer-events-auto bg-black/30 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm cursor-pointer hover:bg-black/50 transition-colors duration-200"
                     >
                         <FaChevronRight />
                     </button>
