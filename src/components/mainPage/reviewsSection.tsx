@@ -41,6 +41,34 @@ const reviews = [
             'Excelentes cabañas. Amplias muy amplias. Toda la construcción e instalación es de calidad. Cuidada en todos los detalles. Ideal para familia tiene espacios súper cómodos y con espacio. Silencio total por la noche para descansarLos dueños unos genios ! La ubicación para ir al cerro espectacular. Muy cerca de todo. Son mucho más lindas que lo que se ven en la foto. Sin duda volveremos',
         img: '/reviews/santiago-urrizola.png',
     },
+    {
+        name: 'gisela zappone',
+        stars: 5,
+        description:
+            'Hermosas cabañas! Gonzalo un anfitrión excelente super amable y atento. Las cabañas son tal cual se ven en las fotos. Super recomendable!!',
+        img: '/reviews/gisela-zappone.png',
+    },
+    {
+        name: 'jean jeldres',
+        stars: 5,
+        description:
+            'Buen lugar, buena atención, alejado del centro, así que bien para nosotros. Tranquilo, seguro, recomendable! Con aire acondicionado seria perfecto 👌! Pero los dormitorios en el primer nivel muy frescos, así q bien para verano. TIENE calefacción para invierno! A disfrutar!!!!',
+        img: '/reviews/jean-jeldres.png',
+    },
+    {
+        name: 'Rodrigo Padin',
+        stars: 5,
+        description:
+            'Nos hospedamos una semana en plena vacaciones de invierno. Excelente lugar, mejor que en las fotos. Sus anfitriones atentos, y las instalaciones muy buenas. Le faltaría algo más de equipamiento en cuanto a vajilla, pero lo básico estaba. Como consejo trataría de mejorar el tema de parrilla en el exterior, ya que la lluvia o nieve no nos permitió hacer asados. Sin dudas volvería.',
+        img: '/reviews/rodrigo-padin.png',
+    },
+    {
+        name: 'Carolina Deruvo',
+        stars: 5,
+        description:
+            'Muy buen servicio, los dueños son muy detallistas y te visitan varias veces para asegurarse de que todo este en buenas condiciones y estes pasando una linda estadía. Gon (dueño) fabrica cervezas artesanales espectaculares de las cuales me traje un par para Buenos Aires. De las instalaciones no me puedo quejar, cuentan con una parrilla por cabaña, un playroom compartido y un fogón. La limpieza te la realizan todos los días y cuenta con una buena ubicación. En resumen fue una muy buena experiencia y volveré en el futuro.',
+        img: '/reviews/carolina-deruvo.png',
+    },
 ];
 
 export default function ReviewsSection() {
