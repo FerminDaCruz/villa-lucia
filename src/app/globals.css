@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'react-day-picker/dist/style.css';
 
 :root {
     --light-green: #a6c24c;
@@ -33,4 +34,142 @@ body {
 
 .no-scroll {
     overflow: hidden;
+}
+
+/* =========================
+   React Day Picker Custom
+   ========================= */
+.rdp {
+    --rdp-accent-color: #2f4f3e; /* dark-green */
+    --rdp-accent-background-color: #eaf2e8;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #1f2937; /* gray-800 */
+    margin: 0;
+}
+
+/* Contenedor del mes */
+.rdp-month {
+    width: 100%;
+}
+
+/* Encabezado */
+.rdp-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.rdp-caption_label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2f4f3e;
+    text-transform: capitalize;
+}
+
+/* Navegación */
+.rdp-button_previous,
+.rdp-button_next {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    color: #374151; /* gray-700 */
+    transition: background-color 0.2s ease;
+}
+
+.rdp-button_previous:hover,
+.rdp-button_next:hover {
+    background-color: #f3f4f6;
+}
+
+/* Días de la semana */
+.rdp-weekday {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6b7280; /* gray-500 */
+    text-transform: uppercase;
+}
+
+/* Celdas de días */
+.rdp-day {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* IMPORTANTE:
+   El número del día está dentro de un botón (.rdp-day_button).
+   Si no definimos el color aquí, puede heredar color blanco
+   de tus estilos globales de button.
+*/
+.rdp-day_button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    color: #1f2937 !important; /* gray-800 */
+    background: transparent;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+/* Hover */
+.rdp-day_button:hover:not(:disabled) {
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+}
+
+/* Día actual */
+.rdp-today .rdp-day_button:not([aria-selected='true']) {
+    border: 1px solid #d1d5db;
+    font-weight: 600;
+}
+
+/* Día seleccionado */
+.rdp-selected .rdp-day_button {
+    background-color: #2f4f3e !important;
+    color: #ffffff !important;
+}
+
+/* Días intermedios del rango */
+.rdp-range_middle .rdp-day_button {
+    background-color: #eaf2e8 !important;
+    color: #2f4f3e !important;
+    border-radius: 0;
+}
+
+/* Inicio y fin del rango */
+.rdp-range_start .rdp-day_button,
+.rdp-range_end .rdp-day_button {
+    background-color: #2f4f3e !important;
+    color: #ffffff !important;
+}
+
+/* Días deshabilitados */
+.rdp-disabled .rdp-day_button {
+    color: #d1d5db !important;
+    opacity: 0.5;
+}
+
+/* Días fuera del mes actual */
+.rdp-outside .rdp-day_button {
+    color: #d1d5db !important;
+    opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .rdp-day,
+    .rdp-day_button {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.875rem;
+    }
+
+    .rdp-caption_label {
+        font-size: 0.95rem;
+    }
 }

@@ -5,6 +5,7 @@ import ContactSection from '@/components/mainPage/contactSection';
 import Image from 'next/image';
 import ReviewsSection from '@/components/mainPage/reviewsSection';
 import FaqSection from '@/components/mainPage/faqSection';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Home() {
     return (
@@ -42,12 +43,23 @@ export default function Home() {
                         className="w-64 md:w-96 h-auto mb-10"
                         priority
                     />
-                    <a
-                        href="#"
-                        className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-dark-green transition-all duration-200 backdrop-blur-md"
-                    >
-                        Consultar disponibilidad
-                    </a>
+                    <div className="mx-auto">
+                        <div className="flex flex-col md:flex-row gap-4 items-center w-full max-w-xs md:max-w-none ">
+                            <a
+                                href="#"
+                                className="w-full md:w-[280px] border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-dark-green transition-all duration-200 backdrop-blur-md text-center"
+                            >
+                                Reservar ahora
+                            </a>
+                            <a
+                                href="#"
+                                className="w-full md:w-[280px] bg-[#25D366] text-white px-6 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
+                            >
+                                <FaWhatsapp className="text-2xl" />
+                                Consultar disponibilidad
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <InfoSections />

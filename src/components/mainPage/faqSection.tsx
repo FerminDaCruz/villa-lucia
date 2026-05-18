@@ -57,7 +57,7 @@ export default function FaqSection() {
                         >
                             <button
                                 onClick={() => toggleFaq(index)}
-                                className="w-full px-6 py-4 flex justify-between items-center bg-neutral-950 hover:bg-neutral-800 transition-colors"
+                                className="w-full px-6 py-4 flex justify-between items-center bg-neutral-800 hover:bg-neutral-700 transition-colors"
                             >
                                 <h3 className="text-left font-medium text-lg ">
                                     ¿{faq.p}?
