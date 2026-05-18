@@ -10,6 +10,12 @@ type HeaderMobileProps = {
     scrolled: boolean;
 };
 export default function HeaderMobile({ scrolled }: HeaderMobileProps) {
+    const phone = '5492944588900';
+    const message = `Hola, quisiera consultar disponibilidad para reservar.`;
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+        message,
+    )}`;
+
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -91,12 +97,19 @@ export default function HeaderMobile({ scrolled }: HeaderMobileProps) {
                     </Link>
 
                     <a
-                        href="#"
-                        className="bg-[#25D366] text-white px-6 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
+                        href={whatsappLink}
+                        className="w-70 bg-[#25D366] text-white px-5 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
                     >
                         <FaWhatsapp className="text-3xl" />
                         Consultar disponibilidad
                     </a>
+                    <Link
+                        href="/contacto"
+                        onClick={() => setOpen(false)}
+                        className="w-70 backdrop-blur-lg border border-white text-white px-5 py-3 rounded-lg hover:bg-white hover:text-light-green transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
+                    >
+                        Reservar ahora
+                    </Link>
                 </nav>
 
                 {/* Footer del menú */}

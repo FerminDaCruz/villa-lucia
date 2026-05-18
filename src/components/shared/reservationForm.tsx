@@ -39,7 +39,7 @@ Cantidad de personas: ${guests}`;
     return (
         <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl max-w-md w-full mx-auto border border-gray-100">
             <h3 className="text-2xl font-medium text-dark-green mb-6 text-center">
-                Reserva tu estadía
+                Reservá tu estadía
             </h3>
 
             <form onSubmit={handleReservation} className="space-y-5">
@@ -146,10 +146,10 @@ Cantidad de personas: ${guests}`;
                 <button
                     type="submit"
                     disabled={!checkIn || !checkOut}
-                    className="w-full bg-dark-green hover:bg-light-green disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 mt-4"
+                    className="w-full bg-[#25D366] hover:bg-[#25D366]/80 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 mt-4"
                 >
                     <FaWhatsapp size={20} />
-                    Consultar por WhatsApp
+                    Reservar por WhatsApp
                 </button>
             </form>
         </div>

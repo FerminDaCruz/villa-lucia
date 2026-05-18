@@ -6,8 +6,14 @@ import Image from 'next/image';
 import ReviewsSection from '@/components/mainPage/reviewsSection';
 import FaqSection from '@/components/mainPage/faqSection';
 import { FaWhatsapp } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Home() {
+    const phone = '5492944588900';
+    const message = `Hola, quisiera consultar disponibilidad para reservar.`;
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+        message,
+    )}`;
     return (
         <div className="relative">
             <div className="relative h-screen">
@@ -45,15 +51,16 @@ export default function Home() {
                     />
                     <div className="mx-auto">
                         <div className="flex flex-col md:flex-row gap-4 items-center w-full max-w-xs md:max-w-none ">
-                            <a
-                                href="#"
+                            <Link
+                                href="/contacto"
                                 className="w-full md:w-[280px] border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-dark-green transition-all duration-200 backdrop-blur-md text-center"
                             >
                                 Reservar ahora
-                            </a>
+                            </Link>
+
                             <a
-                                href="#"
-                                className="w-full md:w-[280px] bg-[#25D366] text-white px-6 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
+                                href={whatsappLink}
+                                className="w-full md:w-[280px] border border-[#25D366] bg-[#25D366] text-white px-6 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
                             >
                                 <FaWhatsapp className="text-2xl" />
                                 Consultar disponibilidad

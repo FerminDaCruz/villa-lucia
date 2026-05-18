@@ -47,9 +47,12 @@ export default function HeaderDesktop({ scrolled }: HeaderDesktopProps) {
                         Contacto
                     </Link>
                 </nav>
-                <button className="px-6 py-2 rounded-lg uppercase border transition-all duration-200 'text-dark-green hover:text-white' : 'bg-transparent backdrop-blur-md text-white border-white hover:bg-white hover:text-light-green">
+                <Link
+                    href="/contacto"
+                    className="px-6 py-2 rounded-lg uppercase border transition-all duration-200 'text-dark-green hover:text-white' : 'bg-transparent backdrop-blur-md text-white border-white hover:bg-white hover:text-light-green"
+                >
                     Reservar
-                </button>
+                </Link>
             </div>
         </div>
     );

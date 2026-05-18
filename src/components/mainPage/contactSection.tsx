@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
@@ -40,7 +41,7 @@ export default function ContactSection() {
 
                 <div className="flex flex-col md:flex-row gap-8 bg-neutral-800 p-6 md:p-10 rounded-2xl shadow-xl">
                     {/* Información de Contacto */}
-                    <div className="w-full md:w-1/3 flex flex-col justify-center space-y-8">
+                    <div className="w-full grow md:w-1/3 flex flex-col flex-1 justify-center space-y-8">
                         <div className="flex items-start gap-4">
                             <div className="bg-neutral-700 p-3 rounded-full text-light-green shrink-0">
                                 <FiMapPin className="w-6 h-6" />
@@ -82,6 +83,12 @@ export default function ContactSection() {
                                 </p>
                             </div>
                         </div>
+                        <Link
+                            href="/contacto"
+                            className="hidden md:block border border-white hover:bg-white hover:text-light-green text-white py-3 px-6 rounded-lg transition-colors text-center"
+                        >
+                            Reservar ahora
+                        </Link>
                     </div>
 
                     {/* Google Maps Embed */}
@@ -98,6 +105,12 @@ export default function ContactSection() {
                             className="absolute inset-0"
                         ></iframe>
                     </div>
+                    <Link
+                        href="/contacto"
+                        className="md:hidden border border-white hover:bg-white hover:text-light-green text-white py-3 px-6 rounded-lg transition-colors text-center"
+                    >
+                        Reservar ahora
+                    </Link>
                 </div>
             </div>
         </div>
