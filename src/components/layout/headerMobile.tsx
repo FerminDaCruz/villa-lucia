@@ -28,7 +28,7 @@ export default function HeaderMobile({ scrolled }: HeaderMobileProps) {
         <div
             className={`sm:hidden fixed top-0 left-0 w-full z-20 transition-all duration-300 ease-in-out px-2 py-2 my-auto ${
                 open
-                    ? 'h-screen bg-black/90'
+                    ? 'h-dvh bg-black/90'
                     : `h-[78px] ${
                           scrolled ? 'backdrop-blur-lg' : 'bg-transparent'
                       }`
