@@ -5,11 +5,30 @@ import Image from 'next/image';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const images = [
-    '/galery/2_LE_upscale_prime_x4.jpg',
-    '/galery/4_LE_upscale_prime_x4.jpg',
-    '/galery/8_LE_upscale_prime_x4.jpg',
-    '/galery/14_LE_upscale_prime_x4.jpg',
-    '/galery/15_LE_upscale_prime_x4.jpg',
+    //exterior
+    '/fotos-drive/22.webp',
+    '/fotos-drive/21.webp',
+    '/fotos-drive/14.webp',
+
+    //interior
+    '/fotos-drive/03.webp',
+    '/fotos-drive/09.webp',
+
+    //exterior
+    '/fotos-drive/16.webp',
+    '/fotos-drive/05.webp',
+    
+    //camas
+    '/fotos-drive/11.webp',
+    '/fotos-drive/04.webp',
+
+    //baño
+    '/fotos-drive/25.webp',
+
+    //quincho
+    '/fotos-drive/17.webp',
+    '/fotos-drive/20.webp',
+    '/fotos-drive/06.webp',
 ];
 
 export default function ImageSlider() {
