@@ -16,22 +16,14 @@ export default function Home() {
     )}`;
     return (
         <div className="relative">
-            <div className="relative h-screen">
+            <div className="relative pt-32 pb-16 md:pt-48 md:pb-24 xl:h-screen xl:p-0">
                 <Image
                     src="/hero/1-ia-1920x1200.webp"
                     alt="Background"
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover hidden md:block"
-                />
-                <Image
-                    src="/hero/1-ia-884x1572.webp"
-                    alt="Background"
-                    fill
-                    priority
-                    sizes="100vw"
-                    className="object-cover block md:hidden"
+                    className="object-cover block"
                 />
 
                 <div className="absolute inset-0 bg-black/40" />
@@ -42,7 +34,7 @@ export default function Home() {
                         Bariloche, Patagonia Argentina
                     </p>
                     <Image
-                        src="/logo/logo-blanco-sinbg-removebg-preview.png"
+                        src="/fotos-drive/logo-blanco.png"
                         width={500}
                         height={500}
                         alt="Villa Lucia Logo"
@@ -60,7 +52,7 @@ export default function Home() {
 
                             <a
                                 href={whatsappLink}
-                                className="w-full md:w-[280px] border border-[#25D366] bg-[#25D366] text-white px-6 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
+                                className="w-full md:w-[280px] border border-whatsapp bg-whatsapp text-white px-6 py-3 rounded-lg hover:bg-[#25D366]/80 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
                             >
                                 <FaWhatsapp className="text-2xl" />
                                 Consultar disponibilidad

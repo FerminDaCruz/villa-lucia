@@ -1,102 +1,88 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import {
+    FiMapPin,
+    FiWifi,
+    FiTv,
+    FiHome,
+    FiLock,
+    FiCoffee,
+    FiCheck,
+    FiInfo,
+    FiCalendar,
+    FiWind,
+} from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+import ArqSection from '@/components/cabanas/arqSection';
+import LevelsSection from '@/components/cabanas/levelsSection';
+import ServicesSection from '@/components/cabanas/servicesComponents';
+import LocationSection from '@/components/cabanas/locationSection';
+import CtaSection from '@/components/cabanas/ctaSection';
+
+export const metadata: Metadata = {
+    title: 'Cabañas y Equipamiento',
+    description:
+        'Conocé nuestras tres cabañas de 90 m2 en Bariloche, totalmente equipadas en dos niveles con hogar a leña, cocina completa y vista al Cerro Otto.',
+};
 
 export default function CabanasPage() {
+    const phone = '5492944588900';
+    const message = 'Hola, quisiera consultar disponibilidad para reservar.';
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+        message,
+    )}`;
+
     return (
-        <div></div>
-        // <div className="pt-28 pb-16 bg-neutral-900 min-h-screen">
-        //     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        //         <div className="text-center mb-16">
-        //             <h1 className="text-4xl md:text-5xl font-heading font-medium mb-4">
-        //                 Nuestras Cabañas
-        //             </h1>
-        //             <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-        //                 Descubrí el confort y la calidez de nuestras cabañas
-        //                 totalmente equipadas, diseñadas para que tu estadía en
-        //                 Bariloche sea inolvidable.
-        //             </p>
-        //         </div>
+        <div className="bg-stone-50 min-h-screen relative overflow-hidden">
+            {/* Elementos decorativos de fondo */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cream/35 rounded-full blur-3xl -z-10 pointer-events-none" />
+            <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-dark-green/5 rounded-full blur-3xl -z-10 pointer-events-none" />
+            <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-cream/20 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-        //         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        //             {/* Ejemplo de Cabaña */}
-        //             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-        //                 <div className="relative h-64 sm:h-80 w-full">
-        //                     <Image
-        //                         src="/hero/1-ia-1920x1200.webp"
-        //                         alt="Cabaña"
-        //                         fill
-        //                         className="object-cover"
-        //                     />
-        //                 </div>
-        //                 <div className="p-8">
-        //                     <h2 className="text-2xl font-heading font-medium text-dark-green mb-3">
-        //                         Cabaña Standard
-        //                     </h2>
-        //                     <p className="text-gray-600 mb-6">
-        //                         Acogedora cabaña ideal para parejas o familias
-        //                         pequeñas. Cuenta con todas las comodidades
-        //                         necesarias para relajarse después de un día de
-        //                         excursiones.
-        //                     </p>
-        //                     <ul className="space-y-2 mb-8 text-sm text-gray-700">
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Capacidad: hasta 4 personas
-        //                         </li>
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Cocina completa
-        //                         </li>
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Wi-Fi de alta velocidad
-        //                         </li>
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Calefacción central
-        //                         </li>
-        //                     </ul>
-        //                 </div>
-        //             </div>
+            {/* HERO SECTION DE LA PÁGINA */}
+            <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 border-b border-stone-250/40 ">
+                <Image
+                    src="/hero/1-ia-1920x1200.webp"
+                    alt="Background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover block"
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+                    <span className="uppercase tracking-widest text-xs  text-white mb-3 block">
+                        Tu hogar en la Patagonia
+                    </span>
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
+                        Nuestras{' '}
+                        <span className="font-heading2 italic text-light-green text-5xl md:text-7xl font-normal block sm:inline">
+                            Cabañas
+                        </span>
+                    </h1>
+                    <p className="text-stone-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                        El complejo está compuesto por tres cabañas gemelas de
+                        90 m² cada una. Diseñadas en dos niveles para maximizar
+                        el confort y la privacidad, con capacidad para alojar
+                        cómodamente de 4 a 6 personas.
+                    </p>
+                </div>
+            </section>
 
-        //             {/* Otra cabaña de ejemplo */}
-        //             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-        //                 <div className="relative h-64 sm:h-80 w-full bg-gray-200 flex items-center justify-center">
-        //                     {/* Placeholder para la imagen de la otra cabaña */}
-        //                     <span className="text-gray-500">
-        //                         Imagen de la cabaña
-        //                     </span>
-        //                 </div>
-        //                 <div className="p-8">
-        //                     <h2 className="text-2xl font-heading font-medium text-dark-green mb-3">
-        //                         Cabaña Premium
-        //                     </h2>
-        //                     <p className="text-gray-600 mb-6">
-        //                         Amplia y con vistas inmejorables. Ideal para
-        //                         familias grandes o grupos de amigos que buscan
-        //                         un extra de confort y espacio en sus vacaciones.
-        //                     </p>
-        //                     <ul className="space-y-2 mb-8 text-sm text-gray-700">
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Capacidad: hasta 6 personas
-        //                         </li>
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             2 Baños completos
-        //                         </li>
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Estacionamiento techado
-        //                         </li>
-        //                         <li className="flex items-center gap-2">
-        //                             <span className="text-light-green">✓</span>{' '}
-        //                             Parrilla privada
-        //                         </li>
-        //                     </ul>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
+            <ArqSection />
+
+            {/* SECCIÓN SERVICIOS */}
+            <ServicesSection />
+
+            {/* SECCIÓN EL COMPLEJO: DOS NIVELES */}
+            <LevelsSection />
+
+            {/* SECCIÓN UBICACIÓN EXCELENTE */}
+            <LocationSection whatsappLink={whatsappLink} />
+
+            {/* SECCIÓN CALL TO ACTION FINAL */}
+            <CtaSection whatsappLink={whatsappLink} />
+        </div>
     );
 }

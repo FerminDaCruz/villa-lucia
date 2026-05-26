@@ -131,8 +131,10 @@ export default function ReviewsSection() {
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row-reverse gap-6 items-center justify-center mb-6 text-center">
-                    <h2 className="text-4xl font-bold text-stone-800  tracking-tight ">
-                        Lo que dicen nuestros huéspedes
+                    <h2 className="text-3xl md:text-4xl font-bold text-stone-800  tracking-tight ">
+                        Lo que dicen nuestros <span className="font-heading2 italic text-dark-green text-4xl md:text-5xl font-normal block sm:inline">
+                            Huespedes
+                        </span>
                     </h2>
 
                     <div className=" bg-white px-4 py-4 rounded-full shadow-sm border border-stone-200">

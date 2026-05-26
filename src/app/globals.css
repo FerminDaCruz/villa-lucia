@@ -5,7 +5,11 @@
     --light-green: #a6c24c;
     --dark-green: #5b8452;
     --light-blue: #05a6dd;
-
+    --cream: #f7f3ee;
+    --dark-cream: #ece7e1;
+    --deep-cream: #ede7dd;
+    --deep-cream-2: #e6d6bb;
+    --whatsapp: #25d366;
     --font-playfair: 'playfair';
     --font-montserrat: 'montserrat';
     --font-lato: 'lato';
@@ -16,6 +20,11 @@
     --color-light-green: var(--light-green);
     --color-dark-green: var(--dark-green);
     --color-light-blue: var(--light-blue);
+    --color-cream: var(--cream);
+    --color-dark-cream: var(--dark-cream);
+    --color-deep-cream: var(--deep-cream);
+    --color-deep-cream-2: var(--deep-cream-2);
+    --color-whatsapp: var(--whatsapp);
 
     --font-heading: var(--font-playfair);
     --font-heading2: var(--font-cormorant);
@@ -25,6 +34,10 @@
     --font-playfair: var(--font-playfair);
     --font-montserrat: var(--font-montserrat);
     --font-lato: var(--font-lato);
+}
+
+html {
+    scrollbar-gutter: stable;
 }
 
 body {

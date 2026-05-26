@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 
 const FAQ = [
     {
@@ -10,7 +10,7 @@ const FAQ = [
     },
     {
         p: 'Las cabañas tienen wifi',
-        r: 'Si, todas las cabañas cuentan con wifi gratuito y TV de pantalla plana por cable.',
+        r: 'Sí, todas las cabañas cuentan con wifi gratuito y TV de pantalla plana por cable.',
     },
     {
         p: 'Hay estacionamiento',
@@ -26,7 +26,7 @@ const FAQ = [
     },
     {
         p: 'Hay habitaciones con baño privado',
-        r: 'Si, todas las cabañas cuentan con baño privado.',
+        r: 'Sí, todas las cabañas cuentan con baño privado.',
     },
 ];
 
@@ -38,45 +38,73 @@ export default function FaqSection() {
     };
 
     return (
-        <section className="py-16 bg-neutral-900 ">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
-                    <h2 className="text-3xl md:text-4xl font-semibold relative inline-block mb-10">
-                        <span className="relative z-10 text-white">
-                            Preguntas Frecuentes
+        <section className="py-20 bg-stone-50 relative overflow-hidden">
+            {/* Elementos decorativos de fondo */}
+            <div className="absolute top-0 right-1/4 w-96 h-96 bg-cream/30 rounded-full blur-3xl -z-10 pointer-events-none" />
+            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-dark-green/5 rounded-full blur-3xl -z-10 pointer-events-none" />
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center mb-16">
+                    <h2 className="text-stone-900 text-3xl md:text-5xl font-bold tracking-tight mb-4">
+                        Preguntas{' '}
+                        <span className="font-heading2 italic text-dark-green text-4xl md:text-6xl font-normal block sm:inline">
+                            Frecuentes
                         </span>
-                        <span className="absolute left-1/2 -bottom-2 w-32 h-0.5 bg-light-green -translate-x-1/2 rounded-full" />
                     </h2>
+                    <p className="max-w-xl mx-auto text-stone-600 text-base md:text-lg leading-relaxed">
+                        Todo lo que necesitas saber antes de tu estadía en nuestras cabañas.
+                    </p>
                 </div>
 
                 <div className="space-y-4">
-                    {FAQ.map((faq, index) => (
-                        <div
-                            key={index}
-                            className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-300"
-                        >
-                            <button
-                                onClick={() => toggleFaq(index)}
-                                className="w-full px-6 py-4 flex justify-between items-center bg-neutral-800 hover:bg-neutral-700 transition-colors"
+                    {FAQ.map((faq, index) => {
+                        const isOpen = openIndex === index;
+                        return (
+                            <div
+                                key={index}
+                                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
+                                    isOpen
+                                        ? 'border-dark-green bg-white shadow-lg shadow-stone-200/50'
+                                        : 'border-stone-200/60 bg-white hover:border-stone-300 hover:shadow-sm'
+                                }`}
                             >
-                                <h3 className="text-left font-medium text-lg ">
-                                    ¿{faq.p}?
-                                </h3>
-                                <span className="text-light-green ml-4 flex-shrink-0">
-                                    {openIndex === index ? (
-                                        <FiChevronUp size={24} />
-                                    ) : (
-                                        <FiChevronDown size={24} />
-                                    )}
-                                </span>
-                            </button>
-                            {openIndex === index && (
-                                <div className="px-6 py-4 bg-neutral-800 text-zinc-300 leading-relaxed">
-                                    <p>{faq.r}</p>
+                                <button
+                                    onClick={() => toggleFaq(index)}
+                                    className="w-full px-6 py-5 flex justify-between items-center text-left transition-colors cursor-pointer"
+                                >
+                                    <h3
+                                        className={`font-semibold text-base md:text-lg transition-colors duration-300 ${
+                                            isOpen
+                                                ? 'text-dark-green font-medium'
+                                                : 'text-stone-800'
+                                        }`}
+                                    >
+                                        ¿{faq.p}?
+                                    </h3>
+                                    <span
+                                        className={`ml-4 flex-shrink-0 transition-transform duration-300 ${
+                                            isOpen
+                                                ? 'text-dark-green rotate-180'
+                                                : 'text-stone-400'
+                                        }`}
+                                    >
+                                        <FiChevronDown size={22} />
+                                    </span>
+                                </button>
+                                <div
+                                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                                        isOpen
+                                            ? 'max-h-96 opacity-100'
+                                            : 'max-h-0 opacity-0 pointer-events-none'
+                                    }`}
+                                >
+                                    <div className="px-6 pb-6 text-stone-600 leading-relaxed text-sm md:text-base border-t border-stone-100 pt-4">
+                                        <p>{faq.r}</p>
+                                    </div>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

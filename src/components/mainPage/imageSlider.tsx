@@ -62,7 +62,7 @@ export default function ImageSlider() {
     };
 
     return (
-        <div className="w-full bg-neutral-900 pb-16">
+        <div className="w-full ">
             <div className="relative w-full md:max-w-4xl lg:max-w-[1056px] mx-auto overflow-hidden ">
                 <div className="relative w-full h-[50vh] md:h-[60vh]">
                     <Image
